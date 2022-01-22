@@ -37,7 +37,7 @@ section h1 {
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  transition: all 1.5s;
+  transition: all 1s ease-in;
   clip-path: circle(20px at calc(100% - 40px) calc(100% - 40px));
 }
 
@@ -50,9 +50,25 @@ section h1 {
   right: 25px;
   transition: all 0.5s;
   cursor: pointer;
+  pointer-events: none;
+  transition: opacity 0.4s 0.5s ease-in-out;
 }
 
 .enlarge {
   clip-path: circle(100%);
   cursor: auto;
+}
+
+.teddy-large {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.teddy-disappear {
+  opacity: 0;
 }
